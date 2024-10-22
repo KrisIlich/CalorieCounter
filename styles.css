@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #2f6aff;
+    --secondary-color: #ffffff;
+    --accent-color: #7d99fc;
+    --background-color: #f0f2f5;
+    --text-color: #333333;
+    --error-color: #f44336;
+    --app-width: 360px; /* Typical mobile width */
+    --app-height: 640px; /* Typical mobile height */
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .app-container {
+    width: var(--app-width);
+    height: var(--app-height);
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+    color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+  }
+  
+  .calories-remaining {
+    background-color: var(--accent-color);
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .calorie-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .calorie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .calorie-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  .calorie-label {
+    font-size: 0.8em;
+    color: var(--secondary-color);
+  }
+  
+  main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .budget-section {
+    margin-bottom: 20px;
+  }
+  
+  .budget-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .budget-section input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .category {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fafafa;
+  }
+  
+  .category h2 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+  }
+  
+  .entry-list {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .entry-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    align-items: center;
+  }
+  
+  .entry-item span {
+    flex: 1;
+  }
+  
+  .entry-item .calories {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: var(--error-color);
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-entry {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .add-entry:hover {
+    background-color: #6a84f1; /* Slightly darker accent color */
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .clear-btn {
+    background-color: var(--error-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .clear-btn:hover {
+    background-color: #d32f2f; /* Darker error color */
+  }
+  
+  .output {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #e0f7fa;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .output span {
+    font-weight: bold;
+  }
+  
+  .surplus {
+    color: var(--accent-color);
+  }
+  
+  .deficit {
+    color: var(--primary-color);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  /* Responsive Design for Smaller Modal Heights */
+  @media (max-height: 700px) {
+    .app-container {
+      height: 90%;
+    }
+  }
+  
