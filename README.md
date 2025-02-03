@@ -2,6 +2,11 @@
 
 Calorie Counter is a straightforward web application designed to help you track your daily calorie intake and expenditure. Easily monitor your calorie goals, consumed calories from food, account for burned exercise calories, and view your remaining calorie balance in real-time.
 
+## How to utilize with React.js
+- Download the repository.
+- Add as a class to any div or page element on a react.js project.
+
+
 ## Features
 
 - **Real-Time Tracking**: Automatically updates your calorie balance as you add or remove entries.
